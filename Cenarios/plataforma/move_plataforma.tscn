@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3cb7vgftlm"]
+
+[ext_resource type="Script" path="res://Cenarios/plataforma/script/move_plataforma.gd" id="1_dcx5r"]
+[ext_resource type="Texture2D" uid="uid://c2vk4fny2ch7f" path="res://Cenarios/plataforma/Plataforma.png" id="2_335sy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2acpt"]
+size = Vector2(80.5, 8)
+
+[node name="Move_plataforma" type="Node2D"]
+script = ExtResource("1_dcx5r")
+
+[node name="plataforma" type="AnimatableBody2D" parent="."]
+
+[node name="Sprite" type="Sprite2D" parent="plataforma"]
+position = Vector2(256.5, 133.25)
+scale = Vector2(0.228022, 0.258333)
+texture = ExtResource("2_335sy")
+region_enabled = true
+region_rect = Rect2(0, 0, 364, 60)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plataforma"]
+position = Vector2(256.75, 132)
+shape = SubResource("RectangleShape2D_2acpt")

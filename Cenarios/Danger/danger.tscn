@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://byrurbrtxm2n8"]
+
+[ext_resource type="Texture2D" uid="uid://cjn3mvmnr06tt" path="res://Cenarios/bloco chão.png" id="1_vdcnb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_18mf5"]
+size = Vector2(573, 93)
+
+[node name="Danger" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(112, 144)
+texture = ExtResource("1_vdcnb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(73.5, 145.5)
+shape = SubResource("RectangleShape2D_18mf5")

@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://xjhtrymx6l2u"]
+
+[ext_resource type="Script" path="res://Cenarios/plataforma/move_5.gd" id="1_fa6t7"]
+[ext_resource type="Texture2D" uid="uid://b3pwcdb27hvba" path="res://Cenarios/plataforma/Plataforma - Copia.png" id="1_tvw7h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ok8f"]
+size = Vector2(4.50001, 32)
+
+[node name="Move_5" type="Node2D"]
+script = ExtResource("1_fa6t7")
+
+[node name="animatable" type="AnimatableBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="animatable"]
+position = Vector2(106.5, 16.5)
+scale = Vector2(0.183333, 0.129121)
+texture = ExtResource("1_tvw7h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="animatable"]
+position = Vector2(106.25, 16)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_7ok8f")
