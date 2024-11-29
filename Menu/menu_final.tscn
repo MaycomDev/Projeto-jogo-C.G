@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://270tpts4tlbe"]
+
+[ext_resource type="Script" path="res://Menu/menu_final.gd" id="1_vytdv"]
+[ext_resource type="Texture2D" uid="uid://d1nqtn2h4ab4m" path="res://Menu/fundo.png" id="2_7dfv2"]
+[ext_resource type="Texture2D" uid="uid://824mgwktccgl" path="res://Menu/titulo.png" id="3_avtc7"]
+[ext_resource type="Texture2D" uid="uid://7gutedw6qfob" path="res://Menu/botão.png" id="4_hlh7y"]
+
+[node name="Final" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vytdv")
+
+[node name="fundo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -576.0
+offset_top = -320.0
+offset_right = 576.0
+offset_bottom = 328.0
+texture = ExtResource("2_7dfv2")
+
+[node name="texto" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -224.0
+offset_top = -192.0
+offset_right = 200.0
+offset_bottom = -104.0
+texture = ExtResource("3_avtc7")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = -104.0
+offset_top = -40.0
+offset_right = 76.0
+offset_bottom = 22.0
+icon = ExtResource("4_hlh7y")
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
